@@ -1,0 +1,27 @@
+{
+	"sites":[
+		{
+			"name": "盘他",
+			"siteurl": "https://www.panothers.com/",
+			"status": "hot"
+		},
+		{
+			"name":"虫部落搜索",
+			"siteurl":"https://search.chongbuluo.com/"
+		},
+		{
+			"name":"爱给网",
+			"siteurl":"https://www.fastsoso.cc/"
+		},
+		{
+			"name":"伪射手",
+			"siteurl":"http://assrt.net/",
+			"status":"hot"
+		},
+		{
+			"name": "fastsoso",
+			"siteurl": "https://www.fastsoso.cc/",
+			"status": "hot"
+		}
+	]
+}

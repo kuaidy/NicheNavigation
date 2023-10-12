@@ -1,0 +1,49 @@
+{
+  "sites": [
+    {
+      "name": "Steam",
+      "siteurl": "https://store.steampowered.com/",
+      "status": "hot"
+    },
+    {
+      "name": "Epic",
+      "siteurl": "https://store.epicgames.com/zh-CN/",
+      "status": "hot"
+    },
+    {
+      "name": "WeGame",
+      "siteurl": "https://www.wegame.com.cn/",
+      "status": "hot"
+    },
+    {
+      "name": "网易游戏",
+      "siteurl": "http://game.163.com/",
+      "status": "hot"
+    },
+    {
+      "name": "4399",
+      "siteurl": "https://www.4399.com/",
+      "status": "hot"
+    },
+    {
+      "name": "TapTap",
+      "siteurl": "https://www.taptap.cn/",
+      "status": "hot"
+    },
+    {
+      "name": "3DM",
+      "siteurl": "https://www.3dmgame.com/",
+      "status": "hot"
+    },
+    {
+      "name": "游侠网",
+      "siteurl": "https://www.ali213.net/",
+      "status": "hot"
+    },
+    {
+      "name": "17173",
+      "siteurl": "https://www.17173.com/",
+      "status": "hot"
+    }
+  ]
+}

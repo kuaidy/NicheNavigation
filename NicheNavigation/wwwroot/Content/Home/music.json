@@ -1,0 +1,49 @@
+{
+  "sites": [
+    {
+      "name": "QQ音乐",
+      "siteurl": "https://y.qq.com/",
+      "status": "hot"
+    },
+    {
+      "name": "酷狗音乐",
+      "siteurl": "https://www.kugou.com/",
+      "status": "hot"
+    },
+    {
+      "name": "网易云音乐",
+      "siteurl": "https://music.163.com/",
+      "status": "hot"
+    },
+    {
+      "name": "酷我音乐",
+      "siteurl": "http://www.kuwo.cn/",
+      "status": "hot"
+    },
+    {
+      "name": "千千音乐",
+      "siteurl": "http://music.91q.com/",
+      "status": "hot"
+    },
+    {
+      "name": "清风DJ",
+      "siteurl": "https://www.vvvdj.com/",
+      "status": "hot"
+    },
+    {
+      "name": "咪咕音乐",
+      "siteurl": "https://music.migu.cn/v3",
+      "status": "hot"
+    },
+    {
+      "name": "九天音乐",
+      "siteurl": "http://www.9sky.com/",
+      "status": "hot"
+    },
+    {
+      "name": "一听音乐",
+      "siteurl": "https://www.1ting.com/",
+      "status": "hot"
+    }
+  ]
+}

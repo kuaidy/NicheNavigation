@@ -1,0 +1,60 @@
+{
+	"sites": [
+		{
+			"name": "独特工具箱",
+			"siteurl": "https://www.dute.org/"
+		},
+		{
+			"name": "在线工具",
+			"siteurl": "https://tool.lu/"
+		},
+		{
+			"name": "即时工具",
+			"siteurl": "https://www.67tool.com/"
+		},
+		{
+			"name": "用户脚本",
+			"siteurl": "https://greasyfork.org/zh-CN/scripts"
+		},
+		{
+			"name": "奶牛快传",
+			"siteurl": "https://cowtransfer.com/"
+		},
+		{
+			"name": "文叔叔",
+			"siteurl": "https://www.wenshushu.cn/"
+		},
+		{
+			"name": "便民查询",
+			"siteurl": "http://www.51240.com/"
+		},
+		{
+			"name": "草料二维码",
+			"siteurl": "http://cli.im/"
+		},
+		{
+			"name": "AutoDraw",
+			"siteurl": "https://www.autodraw.com/"
+		},
+		{
+			"name": "SOMD5",
+			"siteurl": "https://www.somd5.com/"
+		},
+		{
+			"name": "在线白板",
+			"siteurl": "https://witeboard.com/"
+		},
+		{
+			"name": "微词云",
+			"siteurl": "https://www.weiciyun.com/"
+		},
+		{
+			"name": "轻文档",
+			"siteurl": "http://qingwendang.com/"
+		},
+		{
+			"name": "HIPC",
+			"siteurl": "https://hipc.cn/"
+		}
+	]
+}

@@ -1,0 +1,23 @@
+{
+  "sites": [
+    {
+      "name": "chatgpt",
+      "siteurl": "https://chat.openai.com/",
+      "status": "hot"
+    },
+    {
+      "name": "豆包",
+      "siteurl": "https://www.doubao.com/"
+    },
+    {
+      "name": "通义千问",
+      "siteurl": "https://tongyi.aliyun.com/",
+      "status": "hot"
+    },
+    {
+      "name": "文心一言",
+      "siteurl": "https://yiyan.baidu.com/",
+      "status": "hot"
+    }
+  ]
+}

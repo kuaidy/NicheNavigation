@@ -1,0 +1,9 @@
+{
+  "sites": [
+    {
+      "name": "只读",
+      "siteurl": "https://www.rdonly.com",
+      "status": "hot"
+    }
+  ]
+}

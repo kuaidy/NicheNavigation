@@ -1,0 +1,25 @@
+﻿@using NicheNavigation.Model;
+@inject HttpClient Http
+
+<div style="display:flex;flex-wrap:wrap;">
+    @foreach (SiteModel site in SitesModel.Sites)
+    {
+        <div class="card mb-2 me-lg-2" style="width: 12rem;">
+            <div class="card-body" href="#">
+                <h5 class="card-title">@site.Name</h5>
+                <h6 class="card-subtitle mb-2 text-muted"></h6>
+                <p class="card-text"></p>
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter]
+    public string SiteFileName { get; set; }
+    public SitesModel SitesModel { get; set; }
+    protected override async Task OnInitializedAsync()
+    {
+        SitesModel = await Http.GetFromJsonAsync<SitesModel>($"Content/Sites/{SiteFileName}.json");
+    }
+}

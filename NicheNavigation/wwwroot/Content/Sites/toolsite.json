@@ -1,0 +1,54 @@
+{
+  "sites": [
+    {
+      "name": "谷歌站长",
+      "siteurl": "https://search.google.com",
+      "status": "hot"
+    },
+    {
+      "name": "必应站长",
+      "siteurl": "https://www.bing.com/webmaster/home/"
+    },
+    {
+      "name": "神马站长",
+      "siteurl": "http://zhanzhang.sm.cn/"
+    },
+    {
+      "name": "360站长",
+      "siteurl": "http://zhanzhang.so.com"
+    },
+    {
+      "name": "搜狗站长",
+      "siteurl": "http://zhanzhang.sogou.com/"
+    },
+    {
+      "name": "百度统计",
+      "siteurl": "https://tongji.baidu.com"
+    },
+    {
+      "name": "Alexa中国",
+      "siteurl": "http://www.alexa.cn/",
+      "status": "hot"
+    },
+    {
+      "name": "爱站网",
+      "siteurl": "https://www.aizhan.com/",
+      "status": "hot"
+    },
+    {
+      "name": "5118",
+      "siteurl": "https://www.5118.com/",
+      "status": "hot"
+    },
+    {
+      "name": "头条站长",
+      "siteurl": "https://zhanzhang.toutiao.com/",
+      "status": "hot"
+    },
+    {
+      "name": "百度资源平台",
+      "siteurl": "https://ziyuan.baidu.com/",
+      "status": "hot"
+    }
+  ]
+}

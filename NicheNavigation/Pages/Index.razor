@@ -1,0 +1,90 @@
+﻿@page "/"
+@using NicheNavigation.Common;
+@using NicheNavigation.Model;
+@implements IDisposable;
+@inject HttpClient Http;
+
+@if (IsHome)
+{
+    <Home></Home>
+}
+else
+{
+    @foreach (CategorySitesModel categorySites in CategorySitesModels)
+    {
+        <div style="display:flex;align-items:center;font-weight: bold;">
+            <i class="bi-@categorySites.Icon" style="margin-right:5px;"></i>
+            <span>@categorySites.Title</span>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;">
+            @foreach (SiteModel site in categorySites.Sites.Sites)
+            {
+                <div class="card mb-2 me-lg-2" style="width: 12rem;">
+                    <div class="card-body" href="#">
+                        <a href="@site.SiteUrl" target="_blank" style="text-decoration:none;color:black;">@site.Name</a>
+                        <p class="card-text"></p>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+}
+
+@code {
+    public bool IsHome = true;
+    private List<CategorySitesModel> m_CategorySitesModels = new List<CategorySitesModel>();
+    public List<CategorySitesModel> CategorySitesModels
+    {
+        get
+        {
+            return m_CategorySitesModels;
+        }
+        set
+        {
+            m_CategorySitesModels = value;
+        }
+    }
+   
+    protected override async Task OnInitializedAsync()
+    {
+        EventDispatcher.AddAction("ChangeCategory", async (value) =>
+        {
+            CategorySitesModels.Clear();
+            if (value is CategoryModel)
+            {
+                IsHome = false;
+                CategoryModel category = value as CategoryModel;
+                if (category != null)
+                {
+                    foreach (CategoryModel tmpCategory in category.Children)
+                    {
+                        CategorySitesModel categorySitesModel = new CategorySitesModel();
+                        categorySitesModel.Title = tmpCategory.Name;
+                        categorySitesModel.Icon = tmpCategory.Icon;
+                        try
+                        {
+                            categorySitesModel.Sites = await Http.GetFromJsonAsync<SitesModel>($"Content/Sites/{tmpCategory.EName}.json");
+                        }
+                        catch (Exception ex)
+                        {
+                            continue;
+                        }
+                        CategorySitesModels.Add(categorySitesModel);
+                    }
+                }
+                StateHasChanged();
+            }
+            else
+            {
+                IsHome = true;
+                StateHasChanged();
+            }
+        });
+        base.OnInitialized();
+    }
+    
+    public void Dispose()
+    {
+        EventDispatcher.RemoveAction("ChangeCategory");
+    }
+}

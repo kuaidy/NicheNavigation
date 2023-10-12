@@ -1,0 +1,44 @@
+{
+  "sites": [
+    {
+      "name": "docsmall",
+      "siteurl": "https://docsmall.com/"
+    },
+    {
+      "name": "PDF转换",
+      "siteurl": "https://www.pdf2go.com/zh/"
+    },
+    {
+      "name": "ProcessOn",
+      "siteurl": "https://www.processon.com/"
+    },
+    {
+      "name": "smallpdf",
+      "siteurl": "https://smallpdf.com/"
+    },
+    {
+      "name": "轻文档",
+      "siteurl": "http://qingwendang.com/"
+    },
+    {
+      "name": "lightpdf",
+      "siteurl": "https://lightpdf.com/zh/"
+    },
+    {
+      "name": "pdf.io",
+      "siteurl": "https://pdf.io/"
+    },
+    {
+      "name": "pdf派",
+      "siteurl": "https://www.pdfpai.com/"
+    },
+    {
+      "name": "pdfcandy",
+      "siteurl": "https://pdfcandy.com/cn/"
+    },
+    {
+      "name": "pdfmyurl",
+      "siteurl": "https://pdfmyurl.com"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "sites": [
+    {
+      "name": "鸠摩搜索",
+      "siteurl": "https://www.jiumodiary.com/"
+    },
+    {
+      "name": "恩京的书房",
+      "siteurl": "https://www.enjing.com/"
+    },
+    {
+      "name": "偶书",
+      "siteurl": "https://obook.cc/"
+    },
+    {
+      "name": "书伴",
+      "siteurl": "https://bookfere.com/"
+    },
+    {
+      "name": "拨云搜索",
+      "siteurl": "https://www.boyunso.com/"
+    },
+    {
+      "name": "无限小说网",
+      "siteurl": "https://www.555x.org/"
+    },
+    {
+      "name": "魔笔小说",
+      "siteurl": "https://www.555x.org/"
+    },
+    {
+      "name": "搬书匠",
+      "siteurl": "http://www.banshujiang.cn/"
+    },
+    {
+      "name": "哔哩轻小说",
+      "siteurl": "https://www.linovelib.com/"
+    },
+    {
+      "name": "书格",
+      "siteurl": "https://www.shuge.org/"
+    },
+    {
+      "name": "微信读书",
+      "siteurl": "https://weread.qq.com/"
+    }
+  ]
+}

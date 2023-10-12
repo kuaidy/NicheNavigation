@@ -1,0 +1,29 @@
+{
+  "categories": [
+    {
+      "name": "资讯",
+      "icon": "bi-book-fill",
+      "file": "news.json"
+    },
+    {
+      "name": "视频",
+      "icon": "bi-camera-reels-fill",
+      "file": "news.json"
+    },
+    {
+      "name": "购物",
+      "icon": "bi-shop",
+      "file": "shop.json"
+    },
+    {
+      "name": "音乐",
+      "icon": "bi-music-player-fill",
+      "file": "music.json"
+    },
+    {
+      "name": "游戏",
+      "icon": "bi-nintendo-switch",
+      "file": "game.json"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "sites": [
+    {
+      "name": "今日头条",
+      "siteurl": "https://www.toutiao.com/",
+      "status": "hot"
+    },
+    {
+      "name": "微博",
+      "siteurl": "https://weibo.com/",
+      "status": "hot"
+    },
+    {
+      "name": "百度",
+      "siteurl": "https://www.baidu.com/",
+      "status": "hot"
+    },
+    {
+      "name": "搜狐",
+      "siteurl": "https://www.sohu.com/",
+      "status": "hot"
+    },
+    {
+      "name": "网易",
+      "siteurl": "https://www.163.com/",
+      "status": "hot"
+    },
+    {
+      "name": "腾讯",
+      "siteurl": "https://www.qq.com/",
+      "status": "hot"
+    },
+    {
+      "name": "知乎",
+      "siteurl": "https://www.zhihu.com/explore",
+      "status": "hot"
+    },
+    {
+      "name": "豆瓣",
+      "siteurl": "https://www.douban.com/",
+      "status": "hot"
+    },
+    {
+      "name": "钛媒体",
+      "siteurl": "https://www.tmtpost.com/",
+      "status": "hot"
+    }
+  ]
+}

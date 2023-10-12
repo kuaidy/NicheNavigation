@@ -1,0 +1,28 @@
+{
+	"sites": [
+		{
+			"name": "挖沙网",
+			"siteurl": "http://www.waasaa.com"
+		},
+		{
+			"name": "落网",
+			"siteurl": "https://www.luoow.com/"
+		},
+		{
+			"name": "清音陋屋",
+			"siteurl": "http://www.52qingyin.cn/"
+		},
+		{
+			"name": "耳朵的主人",
+			"siteurl": "https://www.edzbe.com/"
+		},
+		{
+			"name": "麦田音乐网",
+			"siteurl": "https://www.mtyyw.com/"
+		},
+		{
+			"name": "如果你能静下来",
+			"siteurl": "http://www.iyccd.com/"
+		}
+	]
+}

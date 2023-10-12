@@ -1,0 +1,49 @@
+{
+  "sites": [
+    {
+      "name": "抖音",
+      "siteurl": "https://www.douyin.com/",
+      "status": "hot"
+    },
+    {
+      "name": "哔哩哔哩",
+      "siteurl": "https://bilibili.com/",
+      "status": "hot"
+    },
+    {
+      "name": "爱奇艺",
+      "siteurl": "https://www.iqiyi.com/",
+      "status": "hot"
+    },
+    {
+      "name": "优酷",
+      "siteurl": "https://www.youku.com/",
+      "status": "hot"
+    },
+    {
+      "name": "腾讯视频",
+      "siteurl": "https://v.qq.com/",
+      "status": "hot"
+    },
+    {
+      "name": "斗鱼",
+      "siteurl": "https://www.douyu.com/",
+      "status": "hot"
+    },
+    {
+      "name": "好看视频",
+      "siteurl": "https://haokan.baidu.com/",
+      "status": "hot"
+    },
+    {
+      "name": "芒果TV",
+      "siteurl": "https://www.mgtv.com/",
+      "status": "hot"
+    },
+    {
+      "name": "搜狐视频",
+      "siteurl": "https://tv.sohu.com/",
+      "status": "hot"
+    }
+  ]
+}

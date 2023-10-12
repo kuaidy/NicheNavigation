@@ -1,0 +1,40 @@
+{
+  "sites": [
+    {
+      "name": "it之家",
+      "siteurl": "https://www.ithome.com/"
+    },
+    {
+      "name": "ReadHub",
+      "siteurl": "https://readhub.cn/"
+    },
+    {
+      "name": "煎蛋",
+      "siteurl": "http://jandan.net/?fulidang"
+    },
+    {
+      "name": "InfoQ",
+      "siteurl": "https://www.infoq.cn/"
+    },
+    {
+      "name": "瓦斯阅读",
+      "siteurl": "https://qnmlgb.tech/"
+    },
+    {
+      "name": "今日热榜",
+      "siteurl": "https://tophub.today/"
+    },
+    {
+      "name": "果壳",
+      "siteurl": "https://www.guokr.com/"
+    },
+    {
+      "name": "PanSci 泛科學",
+      "siteurl": "https://pansci.asia/"
+    },
+    {
+      "name": "威锋",
+      "siteurl": "https://www.feng.com/"
+    }
+  ]
+}

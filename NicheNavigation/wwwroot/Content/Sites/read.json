@@ -1,0 +1,20 @@
+{
+	"sites": [
+		{
+			"name": "左岸读书",
+			"siteurl": "http://www.zreading.cn/"
+		},
+		{
+			"name": "一个",
+			"siteurl": "http://www.wufazhuce.com/"
+		},
+		{
+			"name": "毒蘑菇",
+			"siteurl": "https://www.dumogu.top/"
+		},
+		{
+			"name": "寻古诗词网",
+			"siteurl": "https://www.xungushici.com/"
+		}
+	]
+}

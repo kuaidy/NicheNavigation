@@ -1,0 +1,259 @@
+{
+  "categories": [
+    {
+      "name": "阅读",
+      "icon": "journal-bookmark-fill",
+      "children": [
+        {
+          "ename": "news",
+          "name": "新闻资讯",
+          "children": []
+        },
+        {
+          "ename": "book",
+          "name": "书籍",
+          "icon": "",
+          "children": []
+        },
+        {
+          "ename": "read",
+          "name": "文章",
+          "children": []
+        },
+        {
+          "ename": "blog",
+          "name": "博客",
+          "icon": "wordpress",
+          "children": []
+        },
+        {
+          "ename": "comic",
+          "name": "漫画",
+          "icon": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "视频",
+      "icon": "camera-reels-fill",
+      "children": [
+        {
+          "ename": "video",
+          "name": "在线",
+          "children": []
+        },
+        {
+          "ename": "carton",
+          "name": "动漫",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "音乐",
+      "icon": "file-earmark-music-fill",
+      "children": [
+        {
+          "ename": "music",
+          "name": "音乐",
+          "children": []
+        },
+        {
+          "ename": "musicblog",
+          "name": "音乐博客",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "资源",
+      "icon": "box",
+      "children": [
+        {
+          "ename": "resource",
+          "name": "资源",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "购物",
+      "icon": "shop",
+      "children": [
+        {
+          "ename": "shop",
+          "name": "购物",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "工具",
+      "icon": "tools",
+      "children": [
+        {
+          "ename": "tool",
+          "name": "综合工具",
+          "children": []
+        },
+        {
+          "ename": "tooldoc",
+          "name": "文档工具",
+          "children": []
+        },
+        {
+          "ename": "toolmedia",
+          "name": "音视频工具",
+          "children": []
+        },
+        {
+          "ename": "toolsite",
+          "name": "站长工具",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "社区",
+      "icon": "people-fill",
+      "children": [
+        {
+          "ename": "community",
+          "name": "社区",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "游戏",
+      "icon": "nintendo-switch",
+      "children": [
+        {
+          "ename": "game",
+          "name": "游戏",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "设计",
+      "icon": "dribbble",
+      "children": [
+        {
+          "ename": "design",
+          "name": "设计",
+          "children": []
+        },
+        {
+          "ename": "color",
+          "name": "颜色",
+          "children": []
+        },
+        {
+          "ename": "font",
+          "name": "字体",
+          "children": []
+        },
+        {
+          "ename": "icon",
+          "name": "图标",
+          "children": []
+        }
+      ]
+    },
+    {
+      "ename": "study",
+      "name": "学习",
+      "icon": "file-earmark-code-fill",
+      "children": [
+        {
+          "ename": "study",
+          "name": "学习",
+          "children": []
+        },
+        {
+          "ename": "code",
+          "name": "编程",
+          "children": []
+        }
+      ]
+    },
+    {
+      "ename": "app",
+      "name": "应用",
+      "icon": "subtract",
+      "children": [
+        {
+          "ename": "app",
+          "name": "应用",
+          "children": []
+        },
+        {
+          "ename": "find",
+          "name": "发现",
+          "children": []
+        }
+      ]
+    },
+    {
+      "ename": "work",
+      "name": "工作",
+      "icon": "person-workspace",
+      "children": [
+        {
+          "ename": "work",
+          "name": "工作",
+          "children": []
+        },
+        {
+          "ename": "cash",
+          "name": "变现",
+          "icon": "currency-exchange",
+          "children": []
+        }
+      ]
+    },
+    {
+      "ename": "write",
+      "name": "创作",
+      "icon": "brush-fill",
+      "children": [
+        {
+          "ename": "write",
+          "name": "自媒体",
+          "children": []
+        }
+      ]
+    },
+    {
+      "ename": "question",
+      "name": "问答",
+      "icon": "question-diamond-fill",
+      "children": [
+        {
+          "ename": "question",
+          "name": "问答",
+          "children": []
+        },
+        {
+          "ename": "chatgpt",
+          "name": "AI问答",
+          "children": []
+        }
+      ]
+    },
+    {
+      "ename": "lead",
+      "name": "导航",
+      "icon": "signpost-split-fill",
+      "children": [
+        {
+          "ename": "lead",
+          "name": "导航",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

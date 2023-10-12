@@ -1,0 +1,45 @@
+﻿@using System.Text.Json;
+@using NicheNavigation.Common;
+@using NicheNavigation.Model;
+@inject HttpClient Http
+
+<div class="nav-scrollable">
+    <nav class="flex-column">
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All" @onclick="()=>GetSitesByCat(null)">
+                小众导航
+            </NavLink>
+        </div>
+        @foreach (CategoryModel category in CategoriesModel.Categories)
+        {
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="" @onclick="()=>GetSitesByCat(category)">
+                    <i class="bi-@category.Icon" style="margin-right:5px;"></i>@category.Name
+                </NavLink>
+            </div>
+        }
+    </nav>
+</div>
+
+@code {
+    private CategoriesModel m_CategoriesModel = new CategoriesModel();
+    public CategoriesModel CategoriesModel
+    {
+        get
+        {
+            return m_CategoriesModel;
+        }
+        set
+        {
+            m_CategoriesModel = value;
+        }
+    }
+    protected override async Task OnInitializedAsync()
+    {
+        CategoriesModel = await Http.GetFromJsonAsync<CategoriesModel>("Content/Categories/category.json");
+    }
+    public void GetSitesByCat(CategoryModel category)
+    {
+        EventDispatcher.Dispatch("ChangeCategory", category);
+    }
+}

@@ -1,0 +1,52 @@
+{
+  "sites": [
+    {
+      "name": "HD rainbow",
+      "siteurl": "https://www.hdrainbow.com/"
+    },
+    {
+      "name": "轻文档",
+      "siteurl": "http://qingwendang.com/"
+    },
+    {
+      "name": "bigmp4",
+      "siteurl": "https://bigmp4.com/"
+    },
+    {
+      "name": "jpghd",
+      "siteurl": "https://jpghd.com/"
+    },
+    {
+      "name": "tinypng",
+      "siteurl": "https://tinypng.com/"
+    },
+    {
+      "name": "removebg",
+      "siteurl": "https://www.remove.bg/zh"
+    },
+    {
+      "name": "Squoosh",
+      "siteurl": "https://squoosh.app/"
+    },
+    {
+      "name": "Ai智能上色",
+      "siteurl": "https://affinelayer.com/pixsrv/index.html"
+    },
+    {
+      "name": "soogif",
+      "siteurl": "https://www.soogif.com/gifTool"
+    },
+    {
+      "name": "白描-文字识别",
+      "siteurl": "https://web.baimiaoapp.com/"
+    },
+    {
+      "name": "Pixfix",
+      "siteurl": "https://zh.pixfix.com/"
+    },
+    {
+      "name": "PearOCR",
+      "siteurl": "https://pearocr.com/"
+    }
+  ]
+}
