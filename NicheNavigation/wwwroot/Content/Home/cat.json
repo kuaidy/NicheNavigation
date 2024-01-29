@@ -8,7 +8,7 @@
     {
       "name": "视频",
       "icon": "bi-camera-reels-fill",
-      "file": "news.json"
+      "file": "video.json"
     },
     {
       "name": "购物",

@@ -9,6 +9,10 @@
         {
             get { return $"Images/{this.Name}.svg"; }
         }
+        public string OnlineIcon
+        {
+            get;set;
+        }
 
     }
     public class SitesModel

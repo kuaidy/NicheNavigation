@@ -21,6 +21,10 @@ else
             {
                 <div class="card mb-2 me-lg-2" style="width: 12rem;">
                     <div class="card-body" href="#">
+                        @if (!string.IsNullOrEmpty(site.OnlineIcon))
+                        {
+                            <img style="width:20px;margin-right: 5px;" src="@site.OnlineIcon" />
+                        }
                         <a href="@site.SiteUrl" target="_blank" style="text-decoration:none;color:black;">@site.Name</a>
                         <p class="card-text"></p>
                     </div>
@@ -44,7 +48,7 @@ else
             m_CategorySitesModels = value;
         }
     }
-   
+
     protected override async Task OnInitializedAsync()
     {
         EventDispatcher.AddAction("ChangeCategory", async (value) =>
@@ -64,6 +68,10 @@ else
                         try
                         {
                             categorySitesModel.Sites = await Http.GetFromJsonAsync<SitesModel>($"Content/Sites/{tmpCategory.EName}.json");
+                            foreach (var site in categorySitesModel.Sites.Sites)
+                            {
+                                site.OnlineIcon = $"https://api.iowen.cn/favicon/{site.SiteUrl.Split('?')[0].Replace("http://", "").Replace("https://", "").TrimEnd('/')}.png";
+                            }
                         }
                         catch (Exception ex)
                         {
@@ -82,7 +90,7 @@ else
         });
         base.OnInitialized();
     }
-    
+
     public void Dispose()
     {
         EventDispatcher.RemoveAction("ChangeCategory");

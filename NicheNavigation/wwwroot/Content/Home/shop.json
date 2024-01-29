@@ -2,47 +2,47 @@
   "sites": [
     {
       "name": "京东",
-      "siteurl": "https://www.toutiao.com/",
+      "siteurl": "https://www.jd.com/",
       "status": "hot"
     },
     {
       "name": "天猫",
-      "siteurl": "https://www.douban.com/",
+      "siteurl": "https://www.tmall.com/",
       "status": "hot"
     },
     {
       "name": "淘宝",
-      "siteurl": "https://weibo.com/",
+      "siteurl": "https://www.taobao.com/",
       "status": "hot"
     },
     {
       "name": "亚马逊",
-      "siteurl": "https://www.qq.com/",
+      "siteurl": "https://www.amazon.cn/",
       "status": "hot"
     },
     {
       "name": "苏宁",
-      "siteurl": "https://www.zhihu.com/explore",
+      "siteurl": "https://www.suning.com/",
       "status": "hot"
     },
     {
       "name": "什么值得买",
-      "siteurl": "https://www.tmtpost.com/",
+      "siteurl": "https://www.smzdm.com/",
       "status": "hot"
     },
     {
       "name": "网易严选",
-      "siteurl": "https://www.baidu.com/",
+      "siteurl": "https://you.163.com/",
       "status": "hot"
     },
     {
       "name": "当当",
-      "siteurl": "https://www.sohu.com/",
+      "siteurl": "https://www.dangdang.com/",
       "status": "hot"
     },
     {
       "name": "小米有品",
-      "siteurl": "https://www.163.com/",
+      "siteurl": "https://www.xiaomiyoupin.com/",
       "status": "hot"
     }
   ]
