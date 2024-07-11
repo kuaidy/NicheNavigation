@@ -6,10 +6,6 @@
 			"status": "hot"
 		},
 		{
-			"name": "最美应用",
-			"siteurl": "http://zuimeia.com/"
-		},
-		{
 			"name": "少数派",
 			"siteurl": "http://sspai.com/",
 			"status": "hot"
@@ -44,10 +40,6 @@
 			"siteurl": "https://www.producthunt.com/"
 		},
 		{
-			"name": "创造者日报",
-			"siteurl": "https://creatorsdaily.com/"
-		},
-		{
 			"name": "Itellyou",
 			"siteurl": "https://next.itellyou.cn/"
 		},
@@ -58,6 +50,22 @@
 		{
 			"name": "极简插件",
 			"siteurl": "https://chrome.zzzmh.cn/"
+		},
+		{
+			"name": "hellogithub",
+			"siteurl": "https://hellogithub.com/"
+		},
+		{
+			"name": "新趣集",
+			"siteurl": "https://xinquji.com/"
+		},
+		{
+			"name": "mergeek",
+			"siteurl": "https://mergeek.com/"
+		},
+		{
+			"name": "gofans",
+			"siteurl": "https://gofans.cn/"
 		}
 	]
 }

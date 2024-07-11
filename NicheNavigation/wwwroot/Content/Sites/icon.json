@@ -1,10 +1,6 @@
 {
 	"sites": [
 		{
-			"name": "easyicon",
-			"siteurl": "https://www.easyicon.net/"
-		},
-		{
 			"name": "iconfont",
 			"siteurl": "https://www.iconfont.cn/",
 			"status": "hot"
@@ -12,6 +8,18 @@
 		{
 			"name": "fontawesome",
 			"siteurl": "http://fontawesome.dashgame.com/"
+		},
+		{
+			"name": "iconfinder",
+			"siteurl": "https://www.iconfinder.com/"
+		},
+		{
+			"name": "yesicon",
+			"siteurl": "https://yesicon.app/?lang=zh-hans"
+		},
+		{
+			"name": "iconpark",
+			"siteurl": "https://iconpark.oceanengine.com/home"
 		}
 	]
 }

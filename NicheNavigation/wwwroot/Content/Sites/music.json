@@ -34,12 +34,16 @@
 			"siteurl": "https://www.missevan.com/"
 		},
 		{
-			"name": "铜钟",
-			"siteurl": "https://tonzhon.com/"
-		},
-		{
 			"name": "音悦网",
 			"siteurl": "https://www.yinyuetai.com/"
+		},
+		{
+			"name": "雀乐",
+			"siteurl": "https://www.indie.cn/"
+		},
+		{
+			"name": "无解音乐网",
+			"siteurl": "https://www.wooozy.cn/"
 		}
 	]
 }

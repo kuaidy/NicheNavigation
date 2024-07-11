@@ -49,12 +49,16 @@
 			"siteurl": "https://www.weiciyun.com/"
 		},
 		{
-			"name": "轻文档",
-			"siteurl": "http://qingwendang.com/"
-		},
-		{
 			"name": "HIPC",
 			"siteurl": "https://hipc.cn/"
+		},
+		{
+			"name": "蛙蛙工具",
+			"siteurl": "https://www.iamwawa.cn/"
+		},
+		{
+			"name": "菜鸟工具",
+			"siteurl": "https://www.jyshare.com/"
 		}
 	]
 }

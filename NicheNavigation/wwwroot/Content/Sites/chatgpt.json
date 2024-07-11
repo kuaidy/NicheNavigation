@@ -18,6 +18,11 @@
       "name": "文心一言",
       "siteurl": "https://yiyan.baidu.com/",
       "status": "hot"
+    },
+    {
+      "name": "腾讯元宝",
+      "siteurl": "https://yuanbao.tencent.com/",
+      "status": "hot"
     }
   ]
 }
