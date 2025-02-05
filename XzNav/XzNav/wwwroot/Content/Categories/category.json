@@ -1,0 +1,310 @@
+[
+  {
+    "ename": "ai",
+    "name": "AI",
+    "icon": "person-circle",
+    "children": [
+      {
+        "ename": "ai",
+        "name": "AI",
+        "children": [],
+        "file": "ai.json"
+      }
+    ]
+  },
+  {
+    "ename": "read",
+    "name": "阅读",
+    "icon": "journal-bookmark-fill",
+    "children": [
+      {
+        "ename": "news",
+        "name": "新闻资讯",
+        "children": [],
+        "file": "news.json"
+      },
+      {
+        "ename": "book",
+        "name": "书籍",
+        "icon": "",
+        "children": [],
+        "file": "book.json"
+      },
+      {
+        "ename": "read",
+        "name": "文章",
+        "children": [],
+        "file": "read.json"
+      },
+      {
+        "ename": "blog",
+        "name": "博客",
+        "icon": "wordpress",
+        "children": [],
+        "file": "blog.json"
+      },
+      {
+        "ename": "comic",
+        "name": "漫画",
+        "icon": "",
+        "children": [],
+        "file": "comic.json"
+      }
+    ]
+  },
+  {
+    "ename": "video",
+    "name": "视频",
+    "icon": "camera-reels-fill",
+    "children": [
+      {
+        "ename": "video",
+        "name": "在线",
+        "children": [],
+        "file": "video.json"
+      },
+      {
+        "ename": "carton",
+        "name": "动漫",
+        "children": [],
+        "file": "carton.json"
+      }
+    ]
+  },
+  {
+    "ename": "music",
+    "name": "音乐",
+    "icon": "file-earmark-music-fill",
+    "children": [
+      {
+        "ename": "music",
+        "name": "音乐",
+        "children": [],
+        "file": "music.json"
+      },
+      {
+        "ename": "musicblog",
+        "name": "音乐博客",
+        "children": [],
+        "file": "musicblog.json"
+      }
+    ]
+  },
+  {
+    "ename": "resource",
+    "name": "资源",
+    "icon": "box",
+    "children": [
+      {
+        "ename": "resource",
+        "name": "资源",
+        "children": [],
+        "file": "resource.json"
+      }
+    ]
+  },
+  {
+    "ename": "shop",
+    "name": "购物",
+    "icon": "shop",
+    "children": [
+      {
+        "ename": "shop",
+        "name": "购物",
+        "children": [],
+        "file": "shop.json"
+      }
+    ]
+  },
+  {
+    "ename": "tool",
+    "name": "工具",
+    "icon": "tools",
+    "children": [
+      {
+        "ename": "tool",
+        "name": "综合工具",
+        "children": [],
+        "file": "tool.json"
+      },
+      {
+        "ename": "tooldoc",
+        "name": "文档工具",
+        "children": [],
+        "file": "tooldoc.json"
+      },
+      {
+        "ename": "toolmedia",
+        "name": "音视频工具",
+        "children": [],
+        "file": "toolmedia.json"
+      },
+      {
+        "ename": "toolsite",
+        "name": "站长工具",
+        "children": [],
+        "file": "toolsite.json"
+      }
+    ]
+  },
+  {
+    "ename": "community",
+    "name": "社区",
+    "icon": "people-fill",
+    "children": [
+      {
+        "ename": "community",
+        "name": "社区",
+        "children": [],
+        "file": "community.json"
+      }
+    ]
+  },
+  {
+    "ename": "game",
+    "name": "游戏",
+    "icon": "nintendo-switch",
+    "children": [
+      {
+        "ename": "game",
+        "name": "游戏",
+        "children": [],
+        "file": "game.json"
+      }
+    ]
+  },
+  {
+    "ename": "design",
+    "name": "设计",
+    "icon": "dribbble",
+    "children": [
+      {
+        "ename": "design",
+        "name": "设计",
+        "children": [],
+        "file": "design.json"
+      },
+      {
+        "ename": "color",
+        "name": "颜色",
+        "children": [],
+        "file": "color.json"
+      },
+      {
+        "ename": "font",
+        "name": "字体",
+        "children": [],
+        "file": "font.json"
+      },
+      {
+        "ename": "icon",
+        "name": "图标",
+        "children": [],
+        "file": "icon.json"
+      }
+    ]
+  },
+  {
+    "ename": "study",
+    "name": "学习",
+    "icon": "file-earmark-code-fill",
+    "children": [
+      {
+        "ename": "study",
+        "name": "学习",
+        "children": [],
+        "file": "study.json"
+      },
+      {
+        "ename": "code",
+        "name": "编程",
+        "children": [],
+        "file": "code.json"
+      }
+    ]
+  },
+  {
+    "ename": "app",
+    "name": "应用",
+    "icon": "subtract",
+    "children": [
+      {
+        "ename": "app",
+        "name": "应用",
+        "children": [],
+        "file": "app.json"
+      },
+      {
+        "ename": "find",
+        "name": "发现",
+        "children": [],
+        "file": "find.json"
+      }
+    ]
+  },
+  {
+    "ename": "work",
+    "name": "工作",
+    "icon": "person-workspace",
+    "children": [
+      {
+        "ename": "work",
+        "name": "工作",
+        "children": [],
+        "file": "work.json"
+      },
+      {
+        "ename": "cash",
+        "name": "变现",
+        "icon": "currency-exchange",
+        "children": [],
+        "file": "cash.json"
+      }
+    ]
+  },
+  {
+    "ename": "write",
+    "name": "创作",
+    "icon": "brush-fill",
+    "children": [
+      {
+        "ename": "write",
+        "name": "自媒体",
+        "children": [],
+        "file": "write.json"
+      }
+    ]
+  },
+  {
+    "ename": "question",
+    "name": "问答",
+    "icon": "question-diamond-fill",
+    "children": [
+      {
+        "ename": "question",
+        "name": "问答",
+        "children": [],
+        "file": "question.json"
+      },
+      {
+        "ename": "chatgpt",
+        "name": "AI问答",
+        "children": [],
+        "file": "chatgpt.json"
+      }
+    ]
+  },
+  {
+    "ename": "lead",
+    "name": "导航",
+    "icon": "signpost-split-fill",
+    "children": [
+      {
+        "ename": "lead",
+        "name": "导航",
+        "children": [],
+        "file": "lead.json"
+      }
+    ]
+  }
+]

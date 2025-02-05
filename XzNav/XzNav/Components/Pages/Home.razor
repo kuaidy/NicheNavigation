@@ -1,0 +1,360 @@
+﻿@using System.Text.Json
+@using XzNav.Model
+@inject IJSRuntime JS;
+@inject IWebHostEnvironment WebHostEnvironment
+
+<div class="container text-center">
+    <div class="row align-items-center" style="height:300px;">
+        <div class="col"></div>
+        <div class="col-5">
+            <div class="input-group mb-3">
+                <select class="form-select" style="border:none;background-color:#f6f6f6;" @bind="SelectedSearchSite">
+                    <option value="google">谷歌</option>
+                    <option value="bing">必应</option>
+                    <option value="baidu">百度</option>
+                    <option value="sougou">搜狗</option>
+                    <option value="360">360</option>
+                    <option value="duckduckgo">DuckDuckGo</option>
+                    <option value="ecosia">Ecosia</option>
+                    <option value="yandex">Yandex</option>
+                </select>
+                <input type="text" class="form-control" style="width:240px;outline:none;border:none;background-color:#f6f6f6;" @bind="SearchStr">
+                <button class="btn" type="button" style="border:none;background-color:#f6f6f6;" @onclick="()=>Search()">
+                    <i class="bi-search" style="margin-right:5px;"></i>
+                </button>
+            </div>
+        </div>
+        <div class="col"></div>
+    </div>
+    <div class="row align-items-center">
+        <div style="display:flex;line-height: 50px;align-items: center;">
+            <i class="bi-award-fill"></i>
+            <span style="margin-left:10px;">推荐区</span>
+        </div>
+        <ul style="display:flex;">
+            @foreach (SiteModel site in VipSites)
+            {
+                <li style="list-style:none;">
+                    <img src="/Images/vip.svg" style="width:25px;">
+                    <a href="@site.SiteUrl" style="color:red;">@site.Name</a>
+                </li>
+            }
+        </ul>
+    </div>
+
+
+    @foreach (var keyValue in DictCategorySites)
+    {
+        <div class="row align-items-center">
+            @foreach (CategorySitesModel categorySites in keyValue.Value)
+            {
+                if (string.IsNullOrEmpty(categorySites.Title))
+                {
+                    <div class="col"></div>
+                }
+                else
+                {
+                    <div class="col">
+                        <div style="display:flex;line-height: 50px;align-items: center;">
+                            <i class="@categorySites.Icon"></i>
+                            <span style="margin-left:10px;">@categorySites.Title</span>
+                        </div>
+                        <div class="row">
+                            @foreach (SitesModel sites in categorySites.ListSites)
+                            {
+                                <div class="row" style="line-height: 50px;align-items: center;">
+                                    @foreach (SiteModel site in sites.Sites)
+                                    {
+                                        <div class="col" style="display:flex;">
+                                            <img src="@site.Icon" style="width: 20px;margin-right: 5px;">
+                                            <a href="@site.SiteUrl" style="text-decoration:none;color:black;">@site.Name</a>
+                                        </div>
+                                    }
+                                </div>
+                            }
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    }
+</div>
+
+@code {
+    public string SearchStr { get; set; }
+    private string m_SelectedSearchSite = "bing";
+    public string SelectedSearchSite
+    {
+        get
+        {
+            return m_SelectedSearchSite;
+        }
+        set
+        {
+            m_SelectedSearchSite = value;
+        }
+    }
+    /// <summary>
+    /// 推荐区
+    /// </summary>
+    private List<SiteModel> m_VipSites = new List<SiteModel>();
+    public List<SiteModel> VipSites
+    {
+        get
+        {
+            return m_VipSites;
+        }
+        set
+        {
+            m_VipSites = value;
+        }
+    }
+    /// <summary>
+    /// 资讯
+    /// </summary>
+    private List<SiteModel> m_NewsSites = new List<SiteModel>();
+    public List<SiteModel> NewsSites
+    {
+        get
+        {
+            return m_NewsSites;
+        }
+        set
+        {
+            m_NewsSites = value;
+        }
+    }
+    /// <summary>
+    /// 视频
+    /// </summary>
+    private List<SiteModel> m_VideoSites = new List<SiteModel>();
+    public List<SiteModel> VideoSites
+    {
+        get
+        {
+            return m_VideoSites;
+        }
+        set
+        {
+            m_VideoSites = value;
+        }
+    }
+    /// <summary>
+    /// 购物
+    /// </summary>
+    private List<SiteModel> m_ShopSites = new List<SiteModel>();
+    public List<SiteModel> ShopSites
+    {
+        get
+        {
+            return m_ShopSites;
+        }
+        set
+        {
+            m_ShopSites = value;
+        }
+    }
+    /// <summary>
+    /// 音乐
+    /// </summary>
+    private List<SiteModel> m_MusicSites = new List<SiteModel>();
+    public List<SiteModel> MusicSites
+    {
+        get
+        {
+            return m_MusicSites;
+        }
+        set
+        {
+            m_MusicSites = value;
+        }
+    }
+    /// <summary>
+    /// 游戏
+    /// </summary>
+    private List<SiteModel> m_GameSites = new List<SiteModel>();
+    public List<SiteModel> GameSites
+    {
+        get
+        {
+            return m_GameSites;
+        }
+        set
+        {
+            m_GameSites = value;
+        }
+    }
+
+    private Dictionary<int, List<CategoryModel>> m_DictCategorySites = new Dictionary<int, List<CategoryModel>>();
+    public Dictionary<int, List<CategoryModel>> DictCategorySites
+    {
+        get
+        {
+            return m_DictCategorySites;
+        }
+        set
+        {
+            m_DictCategorySites = value;
+        }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        GetVipSites();
+        GetHomeSites();
+    }
+    protected async void Search()
+    {
+        string queryUrl = string.Empty;
+        switch (SelectedSearchSite)
+        {
+            case "google":
+                {
+                    queryUrl = $"https://www.google.com/search?q={SearchStr}";
+                    break;
+                }
+            case "bing":
+                {
+                    queryUrl = $"https://cn.bing.com/search?q={SearchStr}";
+                    break;
+                }
+            case "baidu":
+                {
+                    queryUrl = $"https://www.baidu.com/s?wd={SearchStr}";
+                    break;
+                }
+            case "sougou":
+                {
+                    queryUrl = $"https://www.sogou.com/web?query={SearchStr}";
+                    break;
+                }
+            case "360":
+                {
+                    queryUrl = $"https://www.so.com/s?q={SearchStr}";
+                    break;
+                }
+            case "duckduckgo":
+                {
+                    queryUrl = $"https://duckduckgo.com/?q={SearchStr}";
+                    break;
+                }
+            case "ecosia":
+                {
+                    queryUrl = $"https://www.ecosia.org/search?q={SearchStr}";
+                    break;
+                }
+            case "yandex":
+                {
+                    queryUrl = $"https://yandex.com/search/?text={SearchStr}";
+                    break;
+                }
+        }
+        string[] strs = new string[] { queryUrl, "_blank" };
+        string res = new(await JS.InvokeAsync<string>("window.open", strs));
+    }
+    protected async void GetVipSites()
+    {
+        try
+        {
+            var filePath = Path.Combine(WebHostEnvironment.WebRootPath, "Content", "Home", $"vip.json");
+            if (!File.Exists(filePath))
+            {
+                return;
+            }
+            string json = File.ReadAllText(filePath);
+            var options = new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true // 不区分大小写
+                };
+            VipSites = JsonSerializer.Deserialize<List<SiteModel>>(json, options);
+            StateHasChanged();
+        }
+        catch (Exception ex)
+        {
+        }
+    }
+    protected async void GetHomeSites()
+    {
+        try
+        {
+            var filePath = Path.Combine(WebHostEnvironment.WebRootPath, "Content", "Home", $"cat.json");
+            if (File.Exists(filePath))
+            {
+                string json = File.ReadAllText(filePath);
+                var options = new JsonSerializerOptions
+                    {
+                        PropertyNameCaseInsensitive = true // 不区分大小写
+                    };
+                CategoriesModel categories = JsonSerializer.Deserialize<CategoriesModel>(json,options);
+                int i = 0;
+                foreach (CategoryModel category in categories.Categories)
+                {
+                    var categoryFilePath = Path.Combine(WebHostEnvironment.WebRootPath, "Content", "Home", $"{category.File}");
+                    if (!File.Exists(categoryFilePath))
+                    {
+                        continue;
+                    }
+                    string jsonCategory = File.ReadAllText(categoryFilePath);
+                    SitesModel sites = JsonSerializer.Deserialize<SitesModel>(jsonCategory,options);
+                    List<SitesModel> listSites = new List<SitesModel>();
+                    GroupSites(sites, listSites);
+                    CategorySitesModel categorySites = new CategorySitesModel();
+                    categorySites.Title = category.Name;
+                    categorySites.Icon = category.Icon;
+                    categorySites.ListSites = listSites;
+                    if (DictCategorySites.ContainsKey(i))
+                    {
+                        if (DictCategorySites[i].Count < 3)
+                        {
+                            DictCategorySites[i].Add(categorySites);
+                        }
+                        else
+                        {
+                            ++i;
+                            DictCategorySites.Add(i, new List<CategorySitesModel>() { categorySites });
+                        }
+                    }
+                    else
+                    {
+                        DictCategorySites.Add(i, new List<CategorySitesModel>() { categorySites });
+                    }
+
+                }
+                int count = DictCategorySites.Count;
+                int catCount = DictCategorySites[count - 1].Count;
+                int completionNum = 3 - catCount % 3;
+                for (int j = 0; j < completionNum; j++)
+                {
+                    DictCategorySites[count - 1].Add(new CategorySitesModel());
+                }
+                StateHasChanged();
+            }
+            
+        }
+        catch (Exception ex)
+        {
+        }
+    }
+    private void GroupSites(List<SiteModel> sites, List<SiteModel> listSites)
+    {
+        int i = 0;
+        List<SiteModel> tmpSites = new List<SiteModel>();
+        foreach (SiteModel site in sites.Sites)
+        {
+            if (i % 3 == 0 && i > 0)
+            {
+                SiteModel siteModel = new SiteModel();
+                listSites.Add(sitesModel);
+                tmpSites = new List<SiteModel>();
+            }
+            tmpSites.Add(site);
+            i++;
+        }
+        if (tmpSites.Count > 0)
+        {
+            SiteModel site = new SiteModel();
+            site.Sites = tmpSites;
+            listSites.Add(sitesModel);
+        }
+    }
+}

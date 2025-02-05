@@ -1,0 +1,30 @@
+[
+  {
+    "name": "DeepSeek",
+    "siteurl": "https://chat.deepseek.com/"
+  },
+  {
+    "name": "通义千问",
+    "siteurl": "https://tongyi.aliyun.com/"
+  },
+  {
+    "name": "ChatGpt",
+    "siteurl": "https://chatgpt.com/"
+  },
+  {
+    "name": "Gemini",
+    "siteurl": "https://gemini.google.com/app"
+  },
+  {
+    "name": "Kimi",
+    "siteurl": "https://kimi.moonshot.cn/"
+  },
+  {
+    "name": "豆包",
+    "siteurl": "https://www.doubao.com/chat/"
+  },
+  {
+    "name": "文心一言",
+    "siteurl": "https://yiyan.baidu.com/"
+  }
+]

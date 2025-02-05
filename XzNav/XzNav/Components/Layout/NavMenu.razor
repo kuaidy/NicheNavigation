@@ -1,0 +1,56 @@
+﻿@using System.Text.Json;
+@using XzNav.Common
+@using XzNav.Model
+
+@inject IWebHostEnvironment WebHostEnvironment
+@inject NavigationManager m_NavigationManager;
+
+<div class="nav-scrollable">
+    <nav class="flex-column">
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="/" Match="NavLinkMatch.All">
+                小众导航
+            </NavLink>
+        </div>
+        @foreach (CategoryModel category in Categories)
+        {
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="@category.CatUrl">
+                    <i class="bi-@category.Icon" style="margin-right:5px;"></i>@category.Name
+                </NavLink>
+            </div>
+        }
+    </nav>
+</div>
+
+@code {
+    private List<CategoryModel> m_Categories = new List<CategoryModel>();
+    public List<CategoryModel> Categories
+    {
+        get
+        {
+            return m_Categories;
+        }
+        set
+        {
+            m_Categories = value;
+        }
+    }
+    protected override async Task OnInitializedAsync()
+    {
+        var filePath = Path.Combine(WebHostEnvironment.WebRootPath, "Content", "Categories", "category.json");
+        if (File.Exists(filePath))
+        {
+            string json = File.ReadAllText(filePath);
+            var options = new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true // 不区分大小写
+            };
+            Categories = JsonSerializer.Deserialize<List<CategoryModel>>(json, options);
+            foreach(CategoryModel category in Categories)
+            {
+                category.CatUrl = $"/{category.EName}";
+            }
+        }
+    }
+}

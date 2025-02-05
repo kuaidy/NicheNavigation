@@ -70,7 +70,7 @@ else
                             categorySitesModel.Sites = await Http.GetFromJsonAsync<SitesModel>($"Content/Sites/{tmpCategory.EName}.json");
                             foreach (var site in categorySitesModel.Sites.Sites)
                             {
-                                site.OnlineIcon = $"https://api.iowen.cn/favicon/{site.SiteUrl.Split('?')[0].Replace("http://", "").Replace("https://", "").TrimEnd('/')}.png";
+                                site.OnlineIcon = $"{site.SiteUrl}/favicon.ico";
                             }
                         }
                         catch (Exception ex)

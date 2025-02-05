@@ -1,0 +1,84 @@
+﻿@using System.Text.Json
+@using XzNav.Model
+@inject IWebHostEnvironment WebHostEnvironment
+
+@page "/{Category}"
+
+<div>
+    @foreach (CategoryModel category in CurrentCategory.Children)
+    {
+        <div class="row">
+            <h3>@category.Name</h3>
+        </div>
+        <div class="row">
+            @foreach (SiteModel site in category.Sites)
+            {
+                <div class="card mb-2 me-lg-2" style="width: 15rem;">
+                    <div class="card-body" style="display:flex;">
+                        <img src="@site.OnlineIcon" class="img-fluid" alt="..." style="width:25px;height:25px;margin-right:10px;">
+                        <a href="@site.SiteUrl" style="text-decoration:none;color:black;">@site.Name</a>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter]
+    public string Category { get; set; }
+    List<CategoryModel> Categories { get; set; } = new List<CategoryModel>();
+    private CategoryModel CurrentCategory { get; set; } = new CategoryModel();
+
+    protected override async Task OnInitializedAsync()
+    {
+        var filePath = Path.Combine(WebHostEnvironment.WebRootPath, "Content", "Categories", "category.json");
+        if (File.Exists(filePath))
+        {
+            string jsonCategoryFile = File.ReadAllText(filePath);
+            var optionsCategory = new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true // 不区分大小写
+                };
+            Categories = JsonSerializer.Deserialize<List<CategoryModel>>(jsonCategoryFile, optionsCategory);
+            if (Categories != null)
+            {
+                CurrentCategory = Categories.FirstOrDefault(c => c.EName == Category);
+                if (CurrentCategory != null && CurrentCategory.Children != null)
+                {
+                    foreach (CategoryModel category in CurrentCategory.Children)
+                    {
+                        var siteFile = Path.Combine(WebHostEnvironment.WebRootPath, "Content", "Sites", $"{category.File}");
+                        if (!File.Exists(siteFile))
+                        {
+                            return;
+                        }
+                        string json = File.ReadAllText(siteFile);
+                        var options = new JsonSerializerOptions
+                            {
+                                PropertyNameCaseInsensitive = true // 不区分大小写
+                            };
+                        if (!string.IsNullOrEmpty(json))
+                        {
+                            try
+                            {
+                                var sites = JsonSerializer.Deserialize<List<SiteModel>>(json, options);
+                                if (sites != null)
+                                {
+                                    foreach(SiteModel site in sites){
+                                        site.OnlineIcon = $"{site.SiteUrl}/favicon.ico";
+                                    }
+                                    category.Sites.AddRange(sites);
+                                }
+                            }
+                            catch
+                            {
+                                continue;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
